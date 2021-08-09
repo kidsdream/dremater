@@ -9,7 +9,8 @@ function BlogArea(props) {
         <Link href={`/blog/${blog.id}`}>
           <a>{blog.title}</a>
         </Link>
-        {blog.updatedAt}
+        <br />
+        更新日：{blog.updatedAt}
       </article>
     </div>
   );

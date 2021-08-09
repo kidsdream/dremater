@@ -14,3 +14,12 @@
   border-radius: 10px;
   backdrop-filter: blur(4px);
 }
+
+@media screen and (max-width: 724px) {
+  .profileArea {
+    float: none;
+    margin: 8px auto 0 auto;
+    width: 90vw;
+    height: 320px;
+  }
+}

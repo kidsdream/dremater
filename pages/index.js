@@ -4,25 +4,45 @@ import Layout from '../components/layout'
 import Profile from '../components/profile'
 import BlogArea from '../components/blogArea'
 import Head from 'next/head'
+import MediaQuery from "react-responsive";
+import React from 'react';
 
 export default function Home({ blogs }) {
   return (
-    <Layout>
-      <Head>
-        <title>DREMATER</title>
-      </Head>
-      <div>
-        <Profile></Profile>
-        <div className={styles.blogList}>
-          {blogs.map((blog, index) => (
-            <BlogArea key={index} value={blog} >
-              {/* {index} */}
-            </BlogArea>
-          ))}
-        </div>
-      </div>
-    </Layout>
+    <>
+      <MediaQuery query="(min-width: 768px)">
+        <Layout>
+          <Head>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <title>DREMATER</title>
+          </Head>
+          <Profile></Profile>
+          <div className={styles.blogList}>
+            {blogs.map((blog, index) => (
+              <BlogArea key={index} value={blog} >
+              </BlogArea>
+            ))}
+          </div>
+        </Layout>
+      </MediaQuery>
+      <MediaQuery query="(max-width: 767px)">
+        <Layout>
+          <Head>
+            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <title>DREMATER</title>
+          </Head>
+          <div className={styles.blogList}>
+            {blogs.map((blog, index) => (
+              <BlogArea key={index} value={blog} >
+              </BlogArea>
+            ))}
+          </div>
+          <Profile></Profile>
+        </Layout>
+      </MediaQuery>
+    </>
   );
+
 }
 
 // データをテンプレートに受け渡す部分の処理を記述します

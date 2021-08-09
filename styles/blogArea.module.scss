@@ -13,3 +13,10 @@
   border-radius: 10px;
   backdrop-filter: blur(4px);
 }
+
+@media screen and (max-width: 724px) {
+  .blogArea {
+    margin: 8px auto;
+    width: 90vw;
+  }
+}
