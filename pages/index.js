@@ -1,19 +1,27 @@
-import Link from "next/link";
 import { client } from "../libs/client";
+import styles from '../styles/blog_list.module.scss';
+import Layout from '../components/layout'
+import Profile from '../components/profile'
+import BlogArea from '../components/blogArea'
+import Head from 'next/head'
 
-export default function Home({ blog }) {
+export default function Home({ blogs }) {
   return (
-    <div>
-      <ul>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Layout>
+      <Head>
+        <title>DREMATER</title>
+      </Head>
+      <div>
+        <Profile></Profile>
+        <div className={styles.blogList}>
+          {blogs.map((blog, index) => (
+            <BlogArea key={index} value={blog} >
+              {/* {index} */}
+            </BlogArea>
+          ))}
+        </div>
+      </div>
+    </Layout>
   );
 }
 
@@ -23,7 +31,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      blog: data.contents,
+      blogs: data.contents,
     },
   };
 };
