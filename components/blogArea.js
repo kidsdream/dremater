@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from '/styles/blogArea.module.scss'
+import Date from './date'
 
 function BlogArea(props) {
   const blog = props.value;
@@ -10,7 +11,8 @@ function BlogArea(props) {
           <a>{blog.title}</a>
         </Link>
         <br />
-        更新日：{blog.updatedAt}
+        更新日：
+        <Date dateString={blog.updatedAt} />
       </article>
     </div>
   );

@@ -15,6 +15,17 @@
   backdrop-filter: blur(4px);
 }
 
+.linkIcon {
+  font-size: 42px;
+  margin: 0 8px;
+  background-color: #fff;
+  padding: px;
+  border-radius: 50%;
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
 @media screen and (max-width: 724px) {
   .profileArea {
     float: none;

@@ -12,13 +12,13 @@ function Profile() {
       <p>大阪のサーバーサイドエンジニア</p>
       <div>
         <Link href="https://twitter.com/new_kidsdream">
-          <a><FontAwesomeIcon icon={faTwitter} /></a>
+          <a><FontAwesomeIcon icon={faTwitter} className={styles.linkIcon}/></a>
         </Link>
         <Link href="https://github.com/kidsdream">
-          <a><FontAwesomeIcon icon={faGithub} /></a>
+          <a><FontAwesomeIcon icon={faGithub}  className={styles.linkIcon}/></a>
         </Link>
         <Link href="https://qiita.com/kidsdream">
-          <a><Image src="/images/qiita.png" alt="Qiitaアイコン画像" width={40} height={40} /></a>
+          <a><Image src="/images/qiita.png" alt="Qiitaアイコン画像" width={40} height={40} className={styles.linkIcon}/></a>
         </Link>
       </div>
     </div>

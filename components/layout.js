@@ -13,7 +13,7 @@ function Layout({ children }) {
           </header>
           {children}
           <footer>
-            <small>&copy; {year} DREMATER ver0.2.1</small>
+            <small>&copy; {year} DREMATER ver0.2.2</small>
           </footer>
         </MediaQuery>
         <MediaQuery query="(max-width: 767px)">
