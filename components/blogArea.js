@@ -6,14 +6,16 @@ function BlogArea(props) {
   const blog = props.value;
   return (
     <div>
-      <article key={blog.id} className={styles.blogArea}>
-        <Link href={`/blog/${blog.id}`}>
-          <a>{blog.title}</a>
-        </Link>
-        <br />
-        更新日：
-        <Date dateString={blog.updatedAt} />
-      </article>
+      <Link href={`/blog/${blog.id}`}>
+        <a>
+          <article key={blog.id} className={styles.blogArea}>
+            {blog.title}
+            <br />
+            更新日：
+            <Date dateString={blog.updatedAt} />
+          </article>
+        </a>
+      </Link>
     </div>
   );
 }
