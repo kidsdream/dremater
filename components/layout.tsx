@@ -8,7 +8,7 @@ function Layout({ children }) {
   return (
     <>
       <div className={styles.body}>
-        <Image src="/images/background.jpg" layout="fill" objectFit="cover" alt="背景画像"/>
+        <Image src="/images/background.jpg" layout="fill" objectFit="cover" priority={true} alt="背景画像"/>
         <MediaQuery query="(min-width: 768px)">
           <header>
             <h1>DREMATER</h1>
