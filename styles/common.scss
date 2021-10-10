@@ -1,0 +1,32 @@
+.contentHeader {
+  width: 100%;
+  height: 60px;
+}
+
+.titleArea {
+  float: left;
+}
+
+.subTitle {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.listButton {
+  float: right;
+  background-color: #000;
+  padding: 8px 0;
+  width: 120px;
+  text-align: center;
+  color: #fff;
+  &:hover {
+    opacity: 0.4;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contentHeader {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

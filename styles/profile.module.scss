@@ -1,36 +1,55 @@
+@import "common.scss";
+@import "utils.scss";
+
 .profileArea {
   position: relative;
   float: left;
   width: 320px;
   height: 560px;
-  margin-left: 40px;
-  margin-top: 80px;
+  margin: 0 80px;
   padding: 16px;
   text-align: center;
-  font-weight: bold;
-  background: rgba(232, 255, 255, .4);
-  box-shadow: 0 8px 32px 0 rgba(31, 35, 135, 0.6);
-  border: 2px solid rgba(255, 255, 255, .3);
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 16px 0 rgba(31, 35, 135, 0.3);
+  border-radius: 50px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 32px;
+}
+
+.iconArea {
+  display: block;
+}
+
+.buttonArea {
+  display: block;
+  margin: 0 8px;
 }
 
 .linkIcon {
-  font-size: 42px;
-  margin: 0 8px;
+  width: 40px;
+  height: 40px;
   background-color: #fff;
-  padding: px;
   border-radius: 50%;
   &:hover {
     opacity: 0.4;
   }
 }
 
+.linkTwitter {
+  padding: 4px;
+  color: #00ACEE;
+}
+
 @media screen and (max-width: 724px) {
   .profileArea {
-    float: none;
-    margin: 8px auto 0 auto;
-    width: 90vw;
-    height: 320px;
+    display: none;
+    // float: none;
+    // margin: 8px auto 0 auto;
+    // width: 90vw;
+    // height: 320px;
   }
 }
