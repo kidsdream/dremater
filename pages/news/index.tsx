@@ -1,23 +1,26 @@
 import { client } from "../../libs/client";
-import styles from '../styles/index.module.scss';
+import styles from '../../styles/newsIndex.module.scss';
 import Layout from '../../components/layout'
-import Profile from '../../components/profile'
-import MobileProfile from '../../components/mobileProfile'
 import NewsArea from '../../components/newsArea'
-import BlogArea from '../../components/blogArea'
 import Head from 'next/head'
 import React from 'react';
-import Link from "next/link";
+
 
 export default function News({ newses }) {
   return (
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>DREMATER</title>
+        <title>DREMATER | ニュース</title>
       </Head>
       <Layout>
-        <p>ニュースページ</p>
+        <h2 className={styles.newsTitle}>お知らせ</h2>
+        <div className={styles.newsList}>
+          {newses.map((news, index) => (
+            <NewsArea key={index} value={news} >
+            </NewsArea>
+          ))}
+        </div>
       </Layout>
     </>
   );
