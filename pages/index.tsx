@@ -24,7 +24,7 @@ export default function Home({ newses, blogs }) {
               <h2 className={styles.mainTitle}>NEWS</h2>
               <p className={styles.subTitle}>お知らせ</p>
             </div>
-            <Link href="#">
+            <Link href="/news">
               <a className={styles.listButton}>お知らせ一覧</a>
             </Link>
           </div>
@@ -39,7 +39,7 @@ export default function Home({ newses, blogs }) {
               <h2 className={styles.mainTitle}>BLOG</h2>
               <p className={styles.subTitle}>ブログ</p>
             </div>
-            <Link href="#">
+            <Link href="\blog">
               <a className={styles.listButton}>ブログ一覧</a>
             </Link>
           </div>
