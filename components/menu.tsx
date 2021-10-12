@@ -5,13 +5,13 @@ import styles from '/styles/menu.module.scss'
 function menu(props) {
   return (
     <Menu {...props}>
-      <Link href={`/`}>
+      <Link href="/">
         <a className={styles.menuItem}>トップページ</a>
       </Link>
-      <Link href={`/`}>
+      <Link href="/news">
         <a className={styles.menuItem}>お知らせ</a>
       </Link>
-      <Link href={`/`}>
+      <Link href="/blog">
         <a className={styles.menuItem}>ブログ</a>
       </Link>
 
