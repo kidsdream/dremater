@@ -15,7 +15,7 @@ function BlogArea(props) {
           {blog.thumbnail ? (
             <picture>
               <source srcSet={blog.thumbnail.url + "?w=180&h=180&fit=crop&dpr=2 2x"} />
-              <Image src={blog.thumbnail.url + "?w=180&h=180&fit=crop"} width={180} height={180} objectFit="cover" layout={"fixed"} priority={true} alt={blog.title + "のサムネイル"} className={styles.blogThumbnail}/>
+              <Image src={blog.thumbnail.url + "?w=180&h=180&fit=crop"} width={160} height={160} objectFit="cover" layout={"fixed"} priority={true} alt={blog.title + "のサムネイル"} className={styles.blogThumbnail}/>
             </picture>
           ) : (
             <div className={styles.noImage} />

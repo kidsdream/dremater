@@ -1,23 +1,25 @@
 import { client } from "../../libs/client";
-import styles from '../styles/index.module.scss';
+import styles from '../../styles/blogIndex.module.scss';
 import Layout from '../../components/layout'
-import Profile from '../../components/profile'
-import MobileProfile from '../../components/mobileProfile'
-import NewsArea from '../../components/newsArea'
 import BlogArea from '../../components/blogArea'
 import Head from 'next/head'
 import React from 'react';
-import Link from "next/link";
 
 export default function News({ blogs }) {
   return (
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>DREMATER</title>
+        <title>DREMATER | ブログ</title>
       </Head>
       <Layout>
-        <p>ブログページ</p>
+        <h2 className={styles.blogTitle}>BLOG</h2>
+        <div className={styles.blogList}>
+          {blogs.map((blog, index) => (
+            <BlogArea key={index} value={blog} >
+            </BlogArea>
+          ))}
+        </div>
       </Layout>
     </>
   );

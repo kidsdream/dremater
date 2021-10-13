@@ -39,7 +39,7 @@ export default function Home({ newses, blogs }) {
               <h2 className={styles.mainTitle}>BLOG</h2>
               <p className={styles.subTitle}>ブログ</p>
             </div>
-            <Link href="\blog">
+            <Link href="/blog">
               <a className={styles.listButton}>ブログ一覧</a>
             </Link>
           </div>
