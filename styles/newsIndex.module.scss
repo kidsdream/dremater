@@ -4,3 +4,9 @@
 .newsList {
   margin-left: 12px;
 }
+
+@media screen and (max-width: 767px) {
+  .newsTitle {
+    margin-left: 46px;
+  }
+}

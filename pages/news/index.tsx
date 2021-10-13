@@ -14,7 +14,7 @@ export default function News({ newses }) {
         <title>DREMATER | ニュース</title>
       </Head>
       <Layout>
-        <h2 className={styles.newsTitle}>お知らせ</h2>
+        <h2 className={styles.newsTitle}>NEWS</h2>
         <div className={styles.newsList}>
           {newses.map((news, index) => (
             <NewsArea key={index} value={news} >
