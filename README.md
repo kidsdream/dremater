@@ -6,7 +6,7 @@ DREAM のブログ兼ポートフォリオサイト
 
 # Image
 
-![dremater-reame](/public/images/dremater-readme.png)
+![DREMATER](https://user-images.githubusercontent.com/38065660/161201603-515e9913-180f-4d05-b327-d7fe5c22d1c1.png)
 
 # Usage
 
