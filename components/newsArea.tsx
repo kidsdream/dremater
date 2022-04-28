@@ -6,7 +6,8 @@ function NewsArea(props) {
   const blog = props.value;
   return (
     <>
-      <dl className={styles.newsArea}>
+      
+      <dl className={styles.newsList}>
         <dt className={styles.newsDate}><Date dateString={blog.createdAt} /></dt>
         <dd>{blog.title}</dd>
       </dl>

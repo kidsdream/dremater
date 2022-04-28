@@ -1,17 +1,10 @@
 @import "common.scss";
 @import "utils.scss";
 
-.newsArea {
-  margin-top: 12px;
+.newsList {
+  padding: 8px;
 }
 
 .newsDate {
   font-size: 12px;
-}
-
-@media screen and (max-width: 767px) {
-  .newsArea {
-    width: 80%;
-    margin: 12px auto 0 auto;
-  }
 }

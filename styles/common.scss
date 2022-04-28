@@ -12,16 +12,14 @@
   font-weight: bold;
 }
 
-.listButton {
-  float: right;
-  background-color: #000;
-  padding: 8px 0;
-  width: 120px;
-  text-align: center;
+.areaTitle {
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  left: -12px;
+  background-color: #333;
   color: #fff;
-  &:hover {
-    opacity: 0.4;
-  }
+  padding: 8px 16px;
 }
 
 @media screen and (max-width: 767px) {

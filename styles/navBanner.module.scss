@@ -1,0 +1,76 @@
+@import "common.scss";
+@import "utils.scss";
+
+.navBanner {
+  position: relative;
+  height: 560px;
+  background-color: #E2E2E2;
+  font-size: 18px;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+.popularNavBanner {
+  position: relative;
+  height: 680px;
+  background-color: #E2E2E2;
+  font-size: 18px;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+.navContent {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  background-color: #fff;
+  border-radius: 40px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .16);
+  margin: 40px 20px;
+  transition: all 0.2s 0s ease;
+  &:hover {
+    opacity: 0.4;
+    cursor: pointer;
+  }
+  &:hover .navButton {
+    background-color: #000;
+    color: #fff;
+  }
+  .navImage {
+    border-radius: 40px 40px 0 0;
+  }
+  .navTitle {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 120px;
+    left: 220px;
+    font-size: 22px;
+    background-color: #fff;
+    padding: 8px 24px;
+  }
+  .navDescription {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .navButton {
+    text-align: center;
+    padding: 8px 0;
+    margin: 40px;
+    border: solid 1px #000;
+    transition: all 0.2s 0s ease;
+  }
+}
+
+.navBlogDescription {
+  display: block;
+  margin: 16px;
+}
+
+.navBlogDate {
+  position: absolute;
+  font-weight: 500;
+  left: 24px;
+  bottom: 16px;
+
+}
