@@ -1,0 +1,38 @@
+@import "common.scss";
+@import "utils.scss";
+
+.lpArea {
+  position: relative;
+  height: 1600px;
+  background-color: rgba(0, 0, 0, 0.8);
+  span {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  p {
+    color: #eee;
+    font-size: 22px;
+  }
+}
+
+.lpBox1 {
+  position: absolute;
+  left: 0;
+  top: 160px;
+  width: 60%;
+  height: 400px;
+  padding: 80px 140px;
+  background-color: #181818;
+}
+
+.lpBox2 {
+  position: absolute;
+  right: 0;
+  top: 1020px;
+  width: 60%;
+  height: 400px;
+  padding: 80px 140px;
+  background-color: #181818;
+}

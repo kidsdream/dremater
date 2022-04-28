@@ -1,56 +1,60 @@
-import { client } from "../libs/client";
-import styles from '../styles/index.module.scss';
+import { client } from "../libs/client"
+import styles from '../styles/index.module.scss'
 import Layout from '../components/layout'
 import Profile from '../components/profile'
 import MobileProfile from '../components/mobileProfile'
 import NewsArea from '../components/newsArea'
 import BlogArea from '../components/blogArea'
+import OpAnim from '../components/opAnim'
+import NavBanner from '../components/navBanner'
+import PopularBlogBanner from '../components/popularBlogBanner'
+import LpArea from '../components/lpArea'
+import ReturnTopButton from '../components/returnTopButton'
 import Head from 'next/head'
-import React from 'react';
-import Link from "next/link";
+import Link from "next/link"
+import Script from 'next/script'
 
 export default function Home({ newses, blogs }) {
   return (
     <>
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>DREMATER</title>
+        <title>DREMATER | クリエイトを手助けするハンズオンWebサイト</title>
       </Head>
       <Layout>
-        <Profile></Profile>
-        <div className={styles.mainContentsArea}>
-          <div className={styles.contentHeader}>
-            <div className={styles.titleArea}>
-              <h2 className={styles.mainTitle}>NEWS</h2>
-              <p className={styles.subTitle}>お知らせ</p>
+        <OpAnim />
+        <div className={styles.opAnimArea} />
+        <NavBanner />
+        <div className={styles.mainContentsOuter}>
+          <div className={styles.mainContentsInner}>
+            <div className={styles.blogArea}>
+              <div className={styles.blogList}>
+                {blogs.map((blog, index) => (
+                  <BlogArea key={index} value={blog} >
+                  </BlogArea>
+                ))}
+              </div>
+              <div className={styles.listButtonArea}>
+                <Link href="/blog">
+                  <a className={styles.listButton}>全ての記事を見る</a>
+                </Link>
+              </div>
             </div>
-            <Link href="/news">
-              <a className={styles.listButton}>お知らせ一覧</a>
-            </Link>
-          </div>
-          <div className={styles.newsList}>
-            {newses.map((news, index) => (
-              <NewsArea key={index} value={news} >
-              </NewsArea>
-            ))}
-          </div>
-          <div className={`${styles.contentHeader} ${styles.margintop40}`}>
-            <div className={styles.titleArea}>
-              <h2 className={styles.mainTitle}>BLOG</h2>
-              <p className={styles.subTitle}>ブログ</p>
+            <Profile></Profile>
+            <div className={styles.newsArea}>
+              <h2 className={styles.areaTitle}>NEWS</h2>
+              {newses.map((news, index) => (
+                <NewsArea key={index} value={news} >
+                </NewsArea>
+              ))}
             </div>
-            <Link href="/blog">
-              <a className={styles.listButton}>ブログ一覧</a>
-            </Link>
-          </div>
-          <div className={styles.blogList}>
-            {blogs.map((blog, index) => (
-              <BlogArea key={index} value={blog} >
-              </BlogArea>
-            ))}
           </div>
         </div>
-        <MobileProfile></MobileProfile>
+        <div className={styles.cb} />
+        <PopularBlogBanner />
+        <LpArea />
+        <ReturnTopButton />
+        {/* <MobileProfile></MobileProfile> */}
       </Layout>
     </>
   );
@@ -61,7 +65,7 @@ export default function Home({ newses, blogs }) {
 export const getStaticProps = async () => {
   const blogData: any = await client.get({
     endpoint: "blog",
-    queries: { limit: 10 }
+    queries: { limit: 6 }
   });
   const newsData: any = await client.get({
     endpoint: "news",

@@ -3,7 +3,6 @@ import styles from '../../styles/blogIndex.module.scss';
 import Layout from '../../components/layout'
 import BlogArea from '../../components/blogArea'
 import Head from 'next/head'
-import React from 'react';
 
 export default function News({ blogs }) {
   return (

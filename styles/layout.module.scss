@@ -1,51 +1,172 @@
 .body {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  font-family: 'Kiwi Maru',
-  serif;
-
-  .background {
-    z-index: -10;
-    position:fixed !important;
-  }
+  background-color: #eee;
 
   header {
-    height: 60px;
+    position: fixed;
+    z-index: 10;
     width: 100%;
-    color: #000;
-    h1 {
-      margin: 0 0 0 180px;
-      line-height: 60px;
-      letter-spacing: 0.04em;
-      cursor: default;
+    height: 80px;
+    color: #fff;
+    background-color: #181818;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+
+    .headerContent {
+      width: 1260px;
+      height: 100%;
+      margin: 0 auto;
+
+      .titleArea {
+        float: left;
+        .mainTitle {
+          float: left;
+          height: 60px;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+
+        .subTitle {
+          float: left;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          line-height: 80px;
+          margin-left: 40px;
+          cursor: default;
+        }
+      }
+
+      .navArea {
+        float: right;
+        margin-bottom: 0;
+        li {
+          float: left;
+          width: 120px;
+          padding: 10px 10px 0 10px;
+          font-size: 20px;
+          font-weight: 600;
+          text-align: center;
+          a {
+            display: block;
+            margin-bottom: -12px;
+            &:hover + span {
+              opacity: 1;
+            }
+          }
+          span {
+            opacity: 0;
+            font-size: 8px;
+            text-align: center;
+            cursor: default;
+            transition: all 0.5s 0s ease;
+          }
+        }
+      }
     }
   }
 
   main {
-    background-color: rgba(255, 255, 255, .3);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, .3);
-    border: 1px solid rgba(255, 255, 255, .3);
-    width: 90%;
-    height: 86vh;
-    margin: 0 auto;
-    padding-top: 40px;
-    border-radius: 50px;
+    width: 100%;
+    background-color: #eee;
   }
 
   footer {
-    height: 60px;
+    position: relative;
     width: 100%;
-    background: rgba(0, 0, 0, .8);
     color: #fff;
-    line-height: 60px;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    cursor: default;
-    z-index: 15;
+    // お問い合わせはこちら
+    .footerContact {
+      height: 400px;
+      background-color: #E2E2E2;
+      border-top: 1px solid #ddd;
+      .contactNote {
+        font-size: 18px;
+        font-weight: 600;
+        color: #000;
+        text-align: center;
+        letter-spacing: 0.04em;
+        p {
+          margin-top: 40px;
+        }
+      }
+      .contactButton {
+        width: 800px;
+        height: 80px;
+        line-height: 80px;
+        margin: 40px auto 0 auto;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        color: #000;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 3px 3px 6px rgba(0, 0, 0, .16);
+        cursor: pointer;
+        transition: all 0.2s 0s ease;
+        &:hover {
+          background-color: #000;
+          color: #fff
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+
+    // サイトマップエリア
+    .footerButton {
+      height: 400px;
+      padding: 40px;
+      background-color: #111;
+      .footerSiteMap {
+        width: 1260px;
+        margin: 0 auto;
+        .siteListArea {
+          float: left;
+          padding-left: 120px;
+          .siteListTitle {
+            font-size: 18px;
+            color: #545454;
+          }
+          .siteMapList {
+            
+            ul {
+              border-left: 1px solid #545454;
+              padding-left: 16px;
+              li {
+                font-size: 12px;
+                letter-spacing: 0.08em;
+                margin-top:16px;
+                a {
+                  transition: all 0.2s 0s ease;
+                  &:hover {
+                    opacity: 0.4;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+      
+    }
+    
+    .footerCopy {
+      height: 40px;
+      background-color: #181818;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 38px;
+      letter-spacing: 0.08em;
+      cursor: default;
+    }
   }
+
 }
 
 @media screen and (max-width: 767px) {

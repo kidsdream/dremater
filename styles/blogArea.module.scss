@@ -1,42 +1,39 @@
 @import "common.scss";
 @import "utils.scss";
 
-.blogArea {
+.singleBlog {
   position: relative;
-  display: block;
-  width: 180px;
-  height: 180px;
-  text-align: center;
-  font-weight: bold;
+  width: 380px;
+  height: 400px;
+  background-color: #fff;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
   &:hover {
-    opacity: 0.4;
+    background-color: #eee;
   }
 }
 
 .blogThumbnail {
-  z-index: -1;
+  width: 340px;
+  height: 240px;
+  padding: 24px 0;
+  margin: 0 auto;
+  // background-color: #000;
 }
 
 .blogStringArea {
-  background: linear-gradient(to bottom, transparent 0%, #000);
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  left: 0px;
-  padding-bottom: 4px;
-  padding-left: 4px;
-  padding-top: 12px;
-  text-align: left;
+  margin: 32px 18px;
 }
 
 .blogTitle {
-  color: #fff;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .blogDate {
-  color: #fff;
-  font-size: 10px;
+  position: absolute;
+  bottom: 8px;
+  font-size: 16px;
   font-weight: 300;
 }
 
@@ -44,6 +41,12 @@
   display: inline-block;
   width: 8px;
   height: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .blogList {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 360px) {
